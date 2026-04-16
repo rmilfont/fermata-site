@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fermata | The Rhythmic Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;600&display=swap');
+        
+        /* Simulating Moonclaw with a high-contrast serif */
+        @font-face {
+            font-family: 'Moonclaw';
+            src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+        }
+        
+        /* Simulating Akrobat ExtraLight with a condensed light sans-serif */
+        @font-face {
+            font-family: 'Akrobat';
+            src: url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300&display=swap');
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #FCF9F8;
+            color: #1B1B1B;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .font-moonclaw { font-family: 'Moonclaw', serif; }
+        .font-akrobat { font-family: 'Akrobat', sans-serif; }
+        
+        .glass-panel {
+            background: rgba(252, 249, 248, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-container": "#ea9939",
+                        "outline-variant": "#d8c3b1",
+                        "primary": "#895100",
+                        "on-secondary-fixed-variant": "#00531d",
+                        "surface": "#fcf9f8",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container": "#f0eded",
+                        "primary-fixed-dim": "#ffb86c",
+                        "surface-bright": "#fcf9f8",
+                        "inverse-surface": "#303030",
+                        "on-primary-fixed-variant": "#683c00",
+                        "tertiary-fixed": "#ffe08d",
+                        "secondary-container": "#63fc81",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "inverse-on-surface": "#f3f0ef",
+                        "background": "#fcf9f8",
+                        "tertiary": "#745b00",
+                        "secondary-fixed-dim": "#45e26a",
+                        "surface-container-low": "#f6f3f2",
+                        "on-secondary-container": "#00732b",
+                        "secondary": "#006e29",
+                        "inverse-primary": "#ffb86c",
+                        "surface-tint": "#895100",
+                        "tertiary-container": "#d0a500",
+                        "tertiary-fixed-dim": "#efc128",
+                        "on-primary-fixed": "#2c1600",
+                        "on-surface-variant": "#534436",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#4f3d00",
+                        "on-background": "#1b1b1b",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#dcd9d9",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#6aff85",
+                        "on-surface": "#1b1b1b",
+                        "surface-container-highest": "#e5e2e1",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#5e3600",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#eae7e7",
+                        "on-secondary-fixed": "#002107",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#ffdcbd",
+                        "outline": "#857464",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#241a00"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Moonclaw", "serif"],
+                        "body": ["Work Sans", "sans-serif"],
+                        "label": ["Akrobat", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-[#FCF9F8] flex justify-between items-center px-12 h-20 w-full max-w-[1920px] mx-auto z-50">
+<div class="flex items-center gap-12">
+<span class="text-2xl font-normal tracking-tight text-[#1B1B1B] font-moonclaw">Fermata</span>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#895100] font-bold border-b-2 border-[#895100] pb-1 hover:text-[#895100] transition-colors duration-300 font-akrobat tracking-wider uppercase text-sm" href="#">Metronome</a>
+<a class="text-[#1B1B1B]/60 font-light hover:text-[#895100] transition-colors duration-300 font-akrobat tracking-wider uppercase text-sm" href="#">Library</a>
+<a class="text-[#1B1B1B]/60 font-light hover:text-[#895100] transition-colors duration-300 font-akrobat tracking-wider uppercase text-sm" href="#">Practice Hub</a>
+<a class="text-[#1B1B1B]/60 font-light hover:text-[#895100] transition-colors duration-300 font-akrobat tracking-wider uppercase text-sm" href="#">Tuner</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="px-6 py-2 bg-primary text-on-primary rounded-full font-akrobat tracking-widest text-xs uppercase hover:opacity-90 transition-all scale-95 active:opacity-80">Go Pro</button>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer scale-95 active:opacity-80 transition-all" data-icon="settings">settings</span>
+</div>
+</nav>
+<div class="bg-[#F2EEED] h-[1px] w-full"></div>
+<main class="flex-grow flex flex-col items-center pt-12 pb-24 px-6 max-w-7xl mx-auto w-full relative">
+<!-- BPM Display Section (Hero) -->
+<section class="w-full flex flex-col items-center mb-16 relative">
+<div class="absolute -top-10 opacity-[0.03] select-none">
+<span class="text-[30rem] font-moonclaw leading-none">f</span>
+</div>
+<div class="flex flex-col items-center z-10">
+<span class="font-akrobat text-on-surface-variant tracking-[0.3em] text-sm mb-2 uppercase font-light">Tempo di Marcia</span>
+<div class="flex items-baseline gap-4">
+<span class="text-[12rem] font-moonclaw leading-tight tracking-tighter text-on-surface">120</span>
+<span class="font-akrobat text-4xl text-on-surface-variant/40 font-light">BPM</span>
+</div>
+<!-- BPM Slider Controls -->
+<div class="w-full max-w-2xl mt-8 flex items-center gap-8 group">
+<button class="w-12 h-12 flex items-center justify-center rounded-full border border-outline-variant/30 text-on-surface-variant hover:bg-surface-variant transition-all">
+<span class="material-symbols-outlined" data-icon="remove">remove</span>
+</button>
+<div class="flex-grow relative h-12 flex items-center">
+<div class="absolute w-full h-[1px] bg-outline-variant/30"></div>
+<div class="absolute w-[40%] h-[1px] bg-primary"></div>
+<div class="absolute left-[40%] w-3 h-3 bg-primary rounded-full ring-8 ring-primary/10 cursor-grab active:cursor-grabbing"></div>
+</div>
+<button class="w-12 h-12 flex items-center justify-center rounded-full border border-outline-variant/30 text-on-surface-variant hover:bg-surface-variant transition-all">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Asymmetric Content Grid -->
+<div class="w-full grid grid-cols-12 gap-12">
+<!-- Left Side: Rhythm & Signature -->
+<div class="col-span-8 flex flex-col gap-12">
+<!-- Rhythm Subdivision -->
+<div>
+<h3 class="font-akrobat text-on-surface-variant tracking-widest text-xs uppercase mb-6 font-light">Rhythmic Figures</h3>
+<div class="flex gap-4 overflow-x-auto no-scrollbar pb-4">
+<div class="flex-shrink-0 w-32 h-32 flex flex-col items-center justify-center rounded-2xl bg-secondary-container/20 border-2 border-secondary text-secondary cursor-pointer transition-all">
+<span class="material-symbols-outlined text-4xl" data-icon="music_note" data-weight="fill">music_note</span>
+<span class="font-akrobat text-xs mt-3 tracking-widest uppercase">Quarter</span>
+</div>
+<div class="flex-shrink-0 w-32 h-32 flex flex-col items-center justify-center rounded-2xl bg-surface-container-low border border-outline-variant/10 text-on-surface-variant cursor-pointer hover:bg-surface-container transition-all">
+<div class="flex">
+<span class="material-symbols-outlined text-2xl -mr-2" data-icon="music_note">music_note</span>
+<span class="material-symbols-outlined text-2xl" data-icon="music_note">music_note</span>
+</div>
+<span class="font-akrobat text-xs mt-3 tracking-widest uppercase">Eighth</span>
+</div>
+<div class="flex-shrink-0 w-32 h-32 flex flex-col items-center justify-center rounded-2xl bg-surface-container-low border border-outline-variant/10 text-on-surface-variant cursor-pointer hover:bg-surface-container transition-all">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-3xl" data-icon="filter_3">filter_3</span>
+<span class="font-akrobat text-xs mt-1 tracking-widest uppercase">Triplet</span>
+</div>
+</div>
+<div class="flex-shrink-0 w-32 h-32 flex flex-col items-center justify-center rounded-2xl bg-surface-container-low border border-outline-variant/10 text-on-surface-variant cursor-pointer hover:bg-surface-container transition-all">
+<div class="flex flex-wrap w-8 justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="music_note">music_note</span>
+<span class="material-symbols-outlined text-sm" data-icon="music_note">music_note</span>
+<span class="material-symbols-outlined text-sm" data-icon="music_note">music_note</span>
+<span class="material-symbols-outlined text-sm" data-icon="music_note">music_note</span>
+</div>
+<span class="font-akrobat text-xs mt-3 tracking-widest uppercase">Sixteenth</span>
+</div>
+</div>
+</div>
+<!-- Time Signature -->
+<div>
+<h3 class="font-akrobat text-on-surface-variant tracking-widest text-xs uppercase mb-6 font-light">Time Signature</h3>
+<div class="flex gap-4">
+<div class="px-8 py-4 bg-surface-container-highest rounded-xl text-2xl font-moonclaw text-on-surface border border-outline-variant/20">4 / 4</div>
+<div class="px-8 py-4 bg-surface-container-low hover:bg-surface-container-highest transition-all rounded-xl text-2xl font-moonclaw text-on-surface/40 cursor-pointer">3 / 4</div>
+<div class="px-8 py-4 bg-surface-container-low hover:bg-surface-container-highest transition-all rounded-xl text-2xl font-moonclaw text-on-surface/40 cursor-pointer">6 / 8</div>
+<div class="px-8 py-4 bg-surface-container-low hover:bg-surface-container-highest transition-all rounded-xl text-2xl font-moonclaw text-on-surface/40 cursor-pointer">5 / 4</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Secondary Actions & Tools -->
+<div class="col-span-4 flex flex-col gap-6">
+<div class="p-8 bg-surface-container-low rounded-3xl flex flex-col gap-8">
+<div class="flex flex-col gap-2">
+<h3 class="font-akrobat text-on-surface-variant tracking-widest text-xs uppercase font-light">Practice Tools</h3>
+<div class="grid grid-cols-2 gap-4 mt-2">
+<button class="flex flex-col items-center justify-center p-4 bg-surface rounded-2xl border border-outline-variant/10 hover:border-primary/30 transition-all gap-2 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="ads_click">ads_click</span>
+<span class="font-akrobat text-[10px] tracking-widest uppercase">Tap BPM</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 bg-surface rounded-2xl border border-outline-variant/10 hover:border-primary/30 transition-all gap-2 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="timer">timer</span>
+<span class="font-akrobat text-[10px] tracking-widest uppercase">Timer</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 bg-surface rounded-2xl border border-outline-variant/10 hover:border-primary/30 transition-all gap-2 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-akrobat text-[10px] tracking-widest uppercase">Visualizer</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 bg-surface rounded-2xl border border-outline-variant/10 hover:border-primary/30 transition-all gap-2 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="history">history</span>
+<span class="font-akrobat text-[10px] tracking-widest uppercase">Log</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="font-akrobat text-on-surface-variant tracking-widest text-xs uppercase font-light">Recent Presets</h3>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-center p-4 bg-surface rounded-xl">
+<span class="font-akrobat text-sm tracking-wide">Chopin Etude Op. 10</span>
+<span class="font-moonclaw text-primary">176</span>
+</div>
+<div class="flex justify-between items-center p-4 bg-surface rounded-xl">
+<span class="font-akrobat text-sm tracking-wide">Slow Blues Scale</span>
+<span class="font-moonclaw text-primary">72</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Floating Action -->
+<div class="fixed bottom-12 left-1/2 -translate-x-1/2 z-40">
+<button class="group flex items-center gap-6 px-12 py-6 bg-primary-container rounded-full shadow-[0px_24px_48px_rgba(234,153,57,0.2)] hover:shadow-[0px_24px_48px_rgba(234,153,57,0.3)] transition-all hover:scale-105 active:scale-95">
+<span class="font-akrobat text-2xl tracking-[0.2em] text-on-primary-container font-semibold uppercase">Start Beat</span>
+<div class="w-10 h-10 rounded-full bg-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container" data-icon="play_arrow" data-weight="fill">play_arrow</span>
+</div>
+</button>
+</div>
+<!-- Background Aesthetic Elements -->
+<div class="fixed top-1/2 right-[-5%] -translate-y-1/2 opacity-[0.04] pointer-events-none rotate-12">
+<img alt="" class="w-[600px] grayscale" data-alt="abstract minimalist sheet music curves and lines on parchment background elegant rhythmic flow soft warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIw8bTr1HtrrI9m67JCfLdrrgWqX9SHsLLUgPGRaRhgXJvVJZ42rGDOqoVvfM-UBVGceDlmpA6OWI1dbUPYLcSmk-UpesEDzR5oYIgCRWDccTnrN0IKFw8fuFKxJHDHHsoioNDfwm0oG1PDwzGMc3VGg2fQK87WlrMwqxjRA6KRrR-ihaUboV6ihniBpnIKTXWhTRlc5CxrR9AOE4qGo3JFkJnSH1cerT3sP39-A1o1EPljToOKT9iZmHyWdVX8OlDUXijx06GKlI"/>
+</div>
+</main>
+<!-- Footer Meta -->
+<footer class="w-full max-w-7xl mx-auto px-12 py-8 flex justify-between items-center text-[10px] font-akrobat tracking-[0.3em] uppercase text-on-surface-variant/40">
+<span>© 2024 Fermata Atelier. Precision crafted.</span>
+<div class="flex gap-8">
+<a class="hover:text-primary transition-colors" href="#">Documentation</a>
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Legacy Mode</a>
+</div>
+</footer>
+</body></html>
