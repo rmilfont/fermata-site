@@ -1,4 +1,5 @@
 import React from "react";
+import logoUrl from "../logo.png";
 import { Metronome, Subdivision } from "./metronome/metronome";
 
 const subdivisions: Array<{ id: Subdivision; label: string; symbol: string }> = [
@@ -213,7 +214,7 @@ export function App() {
       <header className="container">
         <div className="topbar">
           <div className="brand">
-            <img className="brandLogo" src="/logo.png" alt="Fermata" />
+            <img className="brandLogo" src={logoUrl} alt="Fermata" />
             <span className="headerTagline font-akrobat">Metrônomo</span>
           </div>
         </div>
